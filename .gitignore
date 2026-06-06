@@ -14,3 +14,4 @@ wheels/
 
 docs/
 aquilia_rag/chroma_db/
+aquilia_rag/data/
