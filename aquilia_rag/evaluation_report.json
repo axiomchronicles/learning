@@ -1,0 +1,761 @@
+{
+  "summary": {
+    "count": 50,
+    "avg_correctness": 4.38,
+    "avg_completeness": 4.34,
+    "avg_faithfulness": 4.42,
+    "avg_clarity": 4.94
+  },
+  "results": [
+    {
+      "id": "e4c11a9d-6dca-49d2-9ca0-3172f5d491cb",
+      "question": "What is the default cookie_name for TransportPolicy?",
+      "reference_answer": "aquilia_session",
+      "model_answer": "The default `cookie_name` for `TransportPolicy` is **`'aquilia_session'`**.",
+      "difficulty": "easy",
+      "source_file": "docs/docs/modules/sessions/api-reference.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model answer states the default `cookie_name` for `TransportPolicy` as 'aquilia_session', which exactly matches the reference. It is complete, aligned, and clearly presented."
+      }
+    },
+    {
+      "id": "701b0213-4851-4233-9230-83bd791d488a",
+      "question": "The Aquilia MCP server identity uses which string?",
+      "reference_answer": "aquilia-mcp",
+      "model_answer": "The Aquilia MCP server identity is: `aquilia-mcp`.",
+      "difficulty": "easy",
+      "source_file": "docs/docs/mcp/README.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model answer states the Aquilia MCP server identity as `aquilia-mcp`, matching the reference answer exactly. It includes the needed information and is clearly presented."
+      }
+    },
+    {
+      "id": "5f341199-b338-411c-9c24-cd38444a97e9",
+      "question": "Which locale resolver extracts locale from a cookie?",
+      "reference_answer": "CookieLocaleResolver",
+      "model_answer": "The **`CookieLocaleResolver`** extracts the locale from a **cookie** (`aquilia/i18n/middleware.py`).",
+      "difficulty": "easy",
+      "source_file": "docs/docs/i18n/api-reference.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model answer correctly identifies CookieLocaleResolver as the locale resolver that extracts locale from a cookie and is aligned with the reference. It is clear and directly addresses the question with an appropriate mention of the file path."
+      }
+    },
+    {
+      "id": "e7fb80f7-fe23-405b-af29-41362210d619",
+      "question": "What is the default max_page_size for PageNumberPagination?",
+      "reference_answer": "1000",
+      "model_answer": "The default `max_page_size` for `PageNumberPagination` is **1000**.",
+      "difficulty": "easy",
+      "source_file": "docs/docs/modules/controller/api-reference.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model answer states that the default max_page_size for PageNumberPagination is 1000, which matches the reference answer exactly. It is complete (includes the key value), factual, aligned, and clearly stated."
+      }
+    },
+    {
+      "id": "7373977d-1466-4196-a1cd-d3874aaecbf1",
+      "question": "Which class serves as the base exception for all DI errors?",
+      "reference_answer": "DIError",
+      "model_answer": "The base exception class for all DI errors in Aquilia is **`DIError`** (`aquilia/di/errors.py`).",
+      "difficulty": "easy",
+      "source_file": "docs/docs/modules/di/api-reference.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model answer states that the base exception class for all DI errors is DIError, matching the reference answer. It includes the same key information with clear formatting and alignment to the specified class name."
+      }
+    },
+    {
+      "id": "39c698fe-3888-4808-9973-1f3b7f04f4f6",
+      "question": "How many public classes does the providers module contain?",
+      "reference_answer": "72",
+      "model_answer": "The `providers` module contains **72 public classes**.",
+      "difficulty": "easy",
+      "source_file": "docs/docs/modules/providers/architecture.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model answer states that the `providers` module contains 72 public classes, which exactly matches the reference answer. It directly addresses the question with a clear, well-formed statement and includes the key numerical detail."
+      }
+    },
+    {
+      "id": "4810a281-dec3-4e51-90f6-e2e07f1d6683",
+      "question": "How does RouteConflictError in errors.py differ from that in route_compiler.py in base class?",
+      "reference_answer": "In errors.py it extends RegistryError; in route_compiler.py it extends Exception.",
+      "model_answer": "In **`aquilia/aquilary/errors.py`**, `RouteConflictError`:\n\n- **Base class:** `RegistryError`  \n- **Summary:** Raised when **multiple controllers claim the same route path** (i.e., a registry-level route conflict during Aquilary registry/error handling).\n\nIn **`aquilia/aquilary/route_compiler.py`**, `RouteConflictError`:\n\n- **Base class:** `Exception`  \n- **Summary:** Raised when **route patterns conflict** during route compilation (i.e., a compiler-level exception).\n\nSo, the difference is mainly the **inheritance**: one is a **registry-scoped error** (`RegistryError`), while the other is a **plain compilation exception** (`Exception`).",
+      "difficulty": "hard",
+      "source_file": "docs/docs/modules/aquilary/api-reference.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model answer matches the reference: in errors.py RouteConflictError extends RegistryError, and in route_compiler.py it extends Exception. It clearly states the main difference (inheritance) with appropriate context, is fully aligned, and is easy to understand."
+      }
+    },
+    {
+      "id": "aa2c9b52-9850-449a-893b-a050a5fc005a",
+      "question": "List the default HTTP status codes covered by RetryConfig.retry_on_status.",
+      "reference_answer": "429, 500, 502, 503, 504",
+      "model_answer": "The default HTTP status codes in `RetryConfig.retry_on_status` are:\n\n**429, 500, 502, 503, 504**.",
+      "difficulty": "hard",
+      "source_file": "docs/docs/modules/http/api-reference.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model answer lists exactly the default HTTP status codes (429, 500, 502, 503, 504) as in the reference. It is clearly stated, well-formatted, and fully complete."
+      }
+    },
+    {
+      "id": "f50474f3-a974-4506-8179-e78924608745",
+      "question": "Which FlowGuard subclass requires authentication via session?",
+      "reference_answer": "RequireSessionAuthGuard",
+      "model_answer": "The `FlowGuard` subclass that requires authentication via session is **`RequireSessionAuthGuard`** (from `aquilia/auth/integration/flow_guards.py`).",
+      "difficulty": "easy",
+      "source_file": "docs/docs/modules/auth/api-reference.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model answer matches the reference answer exactly, includes the key subclass name, and correctly notes the file location. It is clear and well-formed."
+      }
+    },
+    {
+      "id": "da59beba-b9bc-4042-b1f3-81482d9dd6e9",
+      "question": "What options does `aq serve` accept?",
+      "reference_answer": "--workers, --bind, --use-gunicorn, --timeout, --graceful-timeout",
+      "model_answer": "`aq serve` accepts these options:\n\n- `--workers VALUE`\n- `--bind VALUE`\n- `--use-gunicorn`\n- `--timeout VALUE` (default: `120`)\n- `--graceful-timeout VALUE` (default: `30`)",
+      "difficulty": "medium",
+      "source_file": "docs/docs/cli-reference.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model lists exactly the options from the reference answer: --workers, --bind, --use-gunicorn, --timeout, and --graceful-timeout. While it adds default values for --timeout and --graceful-timeout, this does not contradict the reference and improves completeness/clarity. Formatting and wording are clear and well-formed."
+      }
+    },
+    {
+      "id": "82e13258-e812-49e7-8c5f-1904234d53e8",
+      "question": "Name all eight values of the ModelType enum in mlops.",
+      "reference_answer": "CLASSICAL_ML, DEEP_LEARNING, SLM, LLM, VISION, MULTIMODAL, EMBEDDING, CUSTOM",
+      "model_answer": "The `ModelType` enum in `aquilia/mlops/_types.py` has these eight values:\n\n1. `ModelType.CLASSICAL_ML` (`'classical_ml'`)\n2. `ModelType.DEEP_LEARNING` (`'deep_learning'`)\n3. `ModelType.SLM` (`'slm'`)\n4. `ModelType.LLM` (`'llm'`)\n5. `ModelType.VISION` (`'vision'`)\n6. `ModelType.MULTIMODAL` (`'multimodal'`)\n7. `ModelType.EMBEDDING` (`'embedding'`)\n8. `ModelType.CUSTOM` (`'custom'`)",
+      "difficulty": "easy",
+      "source_file": "docs/docs/modules/mlops/api-reference.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model answer lists exactly the same eight ModelType enum values as the reference (CLASSICAL_ML, DEEP_LEARNING, SLM, LLM, VISION, MULTIMODAL, EMBEDDING, CUSTOM). It is clear, well-structured, and directly aligned with the reference. Minor formatting details (including string representations) do not affect correctness."
+      }
+    },
+    {
+      "id": "fbd167e2-37ac-41fc-a1c8-50495b97de15",
+      "question": "What three fields does ManifestDescriptor include?",
+      "reference_answer": "name, module, class_path",
+      "model_answer": "I don't know.",
+      "difficulty": "medium",
+      "source_file": "docs/docs/modules/typing/api-reference.md",
+      "scores": {
+        "correctness": 1,
+        "completeness": 1,
+        "faithfulness": 1,
+        "clarity": 5,
+        "explanation": "The model answer does not provide the required three fields from the reference (name, module, class_path). It is not factually correct, not complete, and not faithful to the reference. However, it is clearly stated as not known and is well-formed."
+      }
+    },
+    {
+      "id": "7ffdb3e1-4e66-4a6c-88e2-3c2bd72bd973",
+      "question": "Which five algorithms are listed in SUPPORTED_ALGORITHMS?",
+      "reference_answer": "argon2id, scrypt, bcrypt, pbkdf2_sha512, pbkdf2_sha256",
+      "model_answer": "The five algorithms listed in `SUPPORTED_ALGORITHMS` are:\n\n1. `argon2id`\n2. `scrypt`\n3. `bcrypt`\n4. `pbkdf2_sha512`\n5. `pbkdf2_sha256`",
+      "difficulty": "hard",
+      "source_file": "docs/docs/modules/auth/api-reference.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model answer lists exactly the five algorithms named in SUPPORTED_ALGORITHMS: argon2id, scrypt, bcrypt, pbkdf2_sha512, and pbkdf2_sha256. It is fully aligned with the reference answer, includes no extra or missing items, and is clearly formatted."
+      }
+    },
+    {
+      "id": "44389ddd-732e-4306-9b22-a6112edc2440",
+      "question": "What is the default template value for InlineModelAdmin?",
+      "reference_answer": "tabular",
+      "model_answer": "The default `template` value for **`InlineModelAdmin`** is **`'tabular'`**.",
+      "difficulty": "easy",
+      "source_file": "docs/docs/modules/admin/api-reference.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model answer states that the default template value for InlineModelAdmin is 'tabular', matching the reference answer exactly, and it is clear and complete."
+      }
+    },
+    {
+      "id": "ec64dec4-106e-4cb6-9693-7e2063baa671",
+      "question": "In I18nConfig, the query_param field defaults to what value?",
+      "reference_answer": "'lang'",
+      "model_answer": "In `I18nConfig`, the `query_param` field defaults to **`'lang'`**.",
+      "difficulty": "easy",
+      "source_file": "docs/docs/modules/i18n/api-reference.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model answer states that `query_param` defaults to `'lang'`, matching the reference answer exactly. It is clear, complete, and well-aligned with the provided reference."
+      }
+    },
+    {
+      "id": "0ee794c0-6c06-405f-b7fc-7e239087aa24",
+      "question": "Which fault code belongs to AdminRegistrationFault?",
+      "reference_answer": "ADMIN_REGISTRATION_ERROR",
+      "model_answer": "`AdminRegistrationFault` has the fault `code` **`ADMIN_REGISTRATION_ERROR`**.",
+      "difficulty": "easy",
+      "source_file": "docs/docs/modules/admin/api-reference.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model answer states that AdminRegistrationFault's fault code is ADMIN_REGISTRATION_ERROR, matching the reference answer exactly. It includes the key information and is clearly written."
+      }
+    },
+    {
+      "id": "be8c3bfc-0ff0-4beb-b064-1ea503c8839b",
+      "question": "What does SentimentModel subclass to implement predict?",
+      "reference_answer": "AquiliaModel",
+      "model_answer": "I don't know.",
+      "difficulty": "medium",
+      "source_file": "docs/examples/mlops_model_registry_app/README.md",
+      "scores": {
+        "correctness": 1,
+        "completeness": 1,
+        "faithfulness": 1,
+        "clarity": 5,
+        "explanation": "The model answer ('I don't know.') does not provide the required subclass name and therefore is not factually correct or complete. It is not aligned with the reference answer ('AquiliaModel'). The response is clear and well-formed but lacks the needed information."
+      }
+    },
+    {
+      "id": "bb0f4ef4-4a4a-4cf5-a71c-02e1715b9d77",
+      "question": "How does crud_app implement archive instead of hard delete?",
+      "reference_answer": "As a soft state change, not a hard delete.",
+      "model_answer": "I don’t know.",
+      "difficulty": "easy",
+      "source_file": "docs/examples/crud_app/README.md",
+      "scores": {
+        "correctness": 1,
+        "completeness": 1,
+        "faithfulness": 1,
+        "clarity": 5,
+        "explanation": "The model answer \"I don’t know\" provides no factual information about how crud_app implements archive vs hard delete, so correctness, completeness, and faithfulness to the reference are minimal. It is clear and well-formed, hence high clarity."
+      }
+    },
+    {
+      "id": "6fa71409-9269-4796-88d1-3ee99ea080aa",
+      "question": "What is the correct startup phase order for Aquilia?",
+      "reference_answer": "INFRASTRUCTURE (1), SERVICE (2), CONTROLLER (3), APPLICATION (4)",
+      "model_answer": "The correct `AquiliaRuntime` startup lifecycle phase order is:\n\n1. `CREATED`\n2. `CONFIGURING`\n3. `DISCOVERING`\n4. `BOOTSTRAPPING`\n5. `READY`\n6. `RUNNING`\n\nAfter that, it proceeds to shutdown phases (`SHUTTING_DOWN` → `STOPPED` or `FAILED`).",
+      "difficulty": "hard",
+      "source_file": "docs/GUIDE.md",
+      "scores": {
+        "correctness": 1,
+        "completeness": 1,
+        "faithfulness": 1,
+        "clarity": 5,
+        "explanation": "The reference startup phase order is INFRASTRUCTURE (1), SERVICE (2), CONTROLLER (3), APPLICATION (4). The model answer instead lists runtime lifecycle phases (CREATED, CONFIGURING, DISCOVERING, BOOTSTRAPPING, READY, RUNNING), which do not match the referenced phase order. It is therefore not factually aligned with the reference, omits the requested 4-phase ordering, and is not faithful to the reference. Clarity of the listed phases is good, but factual mismatch drives very low scores."
+      }
+    },
+    {
+      "id": "3a0b7013-1e69-41a2-9f78-623d7712af96",
+      "question": "What header does middleware_security_app use for API POST rate-limit identity?",
+      "reference_answer": "X-API-Key",
+      "model_answer": "I don't know.",
+      "difficulty": "medium",
+      "source_file": "docs/examples/middleware_security_app/README.md",
+      "scores": {
+        "correctness": 1,
+        "completeness": 1,
+        "faithfulness": 1,
+        "clarity": 5,
+        "explanation": "The model answer is \"I don't know,\" which does not provide the requested header. Therefore it is incorrect, incomplete, and not faithful to the reference answer (X-API-Key). It is clear and well-formed, but clarity cannot compensate for missing content."
+      }
+    },
+    {
+      "id": "6504cea6-b501-4fc4-bfa5-8a761d75a4c9",
+      "question": "Where are OpenAPI routes registered when docs are enabled?",
+      "reference_answer": "/openapi.json, /docs, and /redoc",
+      "model_answer": "When OpenAPI documentation is enabled, Aquilia registers the OpenAPI routes at:\n\n- `/_openapi.json` → actually `/openapi.json`\n- `/docs`\n- `/redoc`",
+      "difficulty": "easy",
+      "source_file": "docs/docs/architecture.md",
+      "scores": {
+        "correctness": 2,
+        "completeness": 3,
+        "faithfulness": 3,
+        "clarity": 4,
+        "explanation": "The model answer correctly states that /docs and /redoc are registered. It also correctly identifies that the OpenAPI JSON is exposed at /openapi.json, but it adds confusing/incorrect route mapping detail (\"/_openapi.json → actually /openapi.json\"), which is not in the reference and may be misleading. Overall it’s mostly aligned but not fully faithful or clear about the exact registration."
+      }
+    },
+    {
+      "id": "697df325-4a3c-4884-8c2f-2f7f8d5338a9",
+      "question": "Which four database dialect type maps exist in models?",
+      "reference_answer": "sqlite, postgresql, mysql, oracle",
+      "model_answer": "The Models API reference defines four database dialect type maps in `aquilia/models/runtime.py` via `_TYPE_MAPS`:\n\n- `sqlite`: `SQLITE_TYPE_MAP`\n- `postgresql`: `POSTGRES_TYPE_MAP`\n- `mysql`: `MYSQL_TYPE_MAP`\n- `oracle`: `ORACLE_TYPE_MAP`",
+      "difficulty": "medium",
+      "source_file": "docs/docs/modules/models/api-reference.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model identifies exactly four dialect type maps—sqlite, postgresql, mysql, and oracle—and matches the reference answer. It also provides the corresponding internal constant names and does so clearly and coherently."
+      }
+    },
+    {
+      "id": "6e1001db-02d6-4728-a4b0-3d9ea6951cc6",
+      "question": "What is the default value of list_per_page in ModelAdmin?",
+      "reference_answer": "25",
+      "model_answer": "The default value of `list_per_page` in `ModelAdmin` is **25**.",
+      "difficulty": "easy",
+      "source_file": "docs/docs/modules/admin/api-reference.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model answer states that the default value of ModelAdmin.list_per_page is 25, which matches the reference answer exactly. It is concise, clear, and directly addresses the question."
+      }
+    },
+    {
+      "id": "68ff3c75-f188-4be8-99ed-f786ba312e8e",
+      "question": "List the five RenderServiceType enum values.",
+      "reference_answer": "WEB_SERVICE, PRIVATE_SERVICE, BACKGROUND_WORKER, CRON_JOB, STATIC_SITE",
+      "model_answer": "The `RenderServiceType` enum has five values:\n\n- `web_service` (`RenderServiceType.WEB_SERVICE`)\n- `private_service` (`RenderServiceType.PRIVATE_SERVICE`)\n- `background_worker` (`RenderServiceType.BACKGROUND_WORKER`)\n- `cron_job` (`RenderServiceType.CRON_JOB`)\n- `static_site` (`RenderServiceType.STATIC_SITE`)",
+      "difficulty": "medium",
+      "source_file": "docs/docs/modules/providers/api-reference.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model lists exactly the five enum values from the reference answer: WEB_SERVICE, PRIVATE_SERVICE, BACKGROUND_WORKER, CRON_JOB, and STATIC_SITE. It includes no extra values and presents them clearly with matching enum identifiers. Case formatting is clear and does not conflict with the reference. Overall all evaluation criteria are satisfied."
+      }
+    },
+    {
+      "id": "c8d53d86-f1ba-4b3e-b668-e665f7e7b25e",
+      "question": "What is the default ttl in CacheConfig?",
+      "reference_answer": "300",
+      "model_answer": "The default `ttl` in `CacheConfig` is **300 seconds** (`default_ttl: int = 300`).",
+      "difficulty": "easy",
+      "source_file": "docs/docs/modules/cache/api-reference.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model answer states that the default ttl in CacheConfig is 300 seconds, matching the reference answer exactly. It is complete, clear, and fully aligned with the reference."
+      }
+    },
+    {
+      "id": "8f586747-55d1-427a-8116-910ac9a43b39",
+      "question": "What is the default docs_path in OpenAPIConfig?",
+      "reference_answer": "'/docs'",
+      "model_answer": "The default `docs_path` in `OpenAPIConfig` is **`'/docs'`**.",
+      "difficulty": "easy",
+      "source_file": "docs/docs/modules/controller/api-reference.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model answer matches the reference exactly ('/docs'), includes the important default value, stays aligned with the reference, and is clearly stated."
+      }
+    },
+    {
+      "id": "49dac180-6e29-46f0-9745-c25e28bbf8fb",
+      "question": "List the five lifecycle phases defined in AquiliaRuntime and describe what happens in each.",
+      "reference_answer": "CREATED: runtime object created. CONFIGURING: ConfigLoader loads workspace and environment. DISCOVERING: modules scanned, manifests imported, apps namespace built. BOOTSTRAPPING: AquiliaServer constructed with DI, middleware, and subsystems. READY: server built and ready to run. RUNNING: ASGI server accepting requests. SHUTTING_DOWN: graceful shutdown initiated. STOPPED: server fully stopped. FAILED: fatal error during init.",
+      "model_answer": "I don’t know.  \n\nThe context lists AquiliaRuntime’s lifecycle phases as:\n- `CREATED`, `CONFIGURING`, `DISCOVERING`, `BOOTSTRAPPING`, `READY`, `RUNNING`, `SHUTTING_DOWN`, `STOPPED`, `FAILED`\n\nSo I can’t list **five** phases defined in `AquiliaRuntime` from the provided documentation.\n\nWhat I *can* describe from the context is what happens in each of the phases `AquiliaRuntime` can go through:\n\n- **CREATED**: Initial state before lifecycle actions begin.\n- **CONFIGURING** (`configure()`):  \n  - Inserts workspace root into `sys.path` (when needed)  \n  - Sets environment defaults, including `AQUILIA_WORKSPACE` and `AQUILIA_ENV`  \n  - Configures logging  \n  - Verifies/loads `workspace.py` (missing `workspace.py` fails here)  \n  - Loads configuration via `ConfigLoader`\n- **DISCOVERING** (`discover()`):  \n  - Parses workspace content and extracts module names  \n  - Imports declared module manifests  \n  - Dynamically discovers module directories with `manifest.py`  \n  - Rebuilds app config namespaces  \n  - Loads workspace module metadata\n- **BOOTSTRAPPING** (`bootstrap()`):  \n  - Constructs an `AquiliaServer` with the correct `RegistryMode` (using the discovered manifests/config/metadata)\n- **READY**:  \n  - `AquiliaRuntime.app` and `.server` become available in this phase.\n- **RUNNING**:  \n  - Server is running; request handling via the ASGI app is active.\n- **SHUTTING_DOWN**:  \n  - Shutdown is initiated (lifecycle hooks/subsystems teardown).\n- **STOPPED**:  \n  - Runtime fully stopped.\n- **FAILED**:  \n  - Lifecycle operation failed.\n\nIf you meant “five phases” in a different sense (e.g., the *major* stages: configure/discover/bootstrap/run/stop), tell me which grouping you want and I’ll map it to the documented phases.",
+      "difficulty": "hard",
+      "source_file": "docs/docs/runtime-lifecycle.md",
+      "scores": {
+        "correctness": 2,
+        "completeness": 1,
+        "faithfulness": 3,
+        "clarity": 4,
+        "explanation": "The model answer correctly describes many phase behaviors (CONFIGURING, DISCOVERING, BOOTSTRAPPING, READY/RUNNING/SHUTTING_DOWN/STOPPED/FAILED) in a broadly consistent way, but it does not follow the task: it fails to list exactly five lifecycle phases as requested. It also contradicts the instructions by saying it cannot list five phases defined in AquiliaRuntime, while then listing many phases. Thus correctness and completeness are low for the specific question. Clarity is good, with well-structured bullets, and faithfulness is moderate since most descriptions align with the provided reference-style lifecycle flow."
+      }
+    },
+    {
+      "id": "78aa8d90-b631-456c-8e61-b861e72b4d7f",
+      "question": "What is the default graceful-timeout for `aq serve`?",
+      "reference_answer": "30",
+      "model_answer": "The default `graceful-timeout` for `aq serve` is **30 seconds** (`--graceful-timeout`, gunicorn only).",
+      "difficulty": "easy",
+      "source_file": "docs/docs/cli-reference.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "Model answer states the default graceful-timeout for `aq serve` is 30 seconds, matching the reference. It is clear and complete, with no conflicting details."
+      }
+    },
+    {
+      "id": "ea84f227-cef0-4b25-9c47-8d6f23fb6762",
+      "question": "Which command displays SQL statements for a specific migration?",
+      "reference_answer": "aq db sqlmigrate",
+      "model_answer": "The command is **`aq db sqlmigrate`**.\n\nIt **displays the SQL statements for a specific migration**:\n\n```bash\naq db sqlmigrate MIGRATION_NAME [--migrations-dir VALUE] [--database VALUE]\n```\n\n- `MIGRATION_NAME` (required): the migration identifier to display SQL for\n- `--migrations-dir` (optional, default: `migrations`): migrations directory\n- `--database` (optional): database alias (for multi-db)",
+      "difficulty": "easy",
+      "source_file": "docs/docs/cli-reference.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 4,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model answer correctly identifies `aq db sqlmigrate` as the command and describes its purpose accurately. It adds useful usage-argument details that aren’t required but align with the expected command behavior. Formatting is clear and readable."
+      }
+    },
+    {
+      "id": "3d59fbeb-c9c1-4c88-b402-c1a0a2faff5d",
+      "question": "What is the default drift detection method in `aq observe drift`?",
+      "reference_answer": "psi",
+      "model_answer": "The default drift detection method in `aq observe drift` is **`psi`** (set by `--method` default value).",
+      "difficulty": "easy",
+      "source_file": "docs/docs/cli-reference.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model answer states that the default drift detection method for `aq observe drift` is `psi`, which matches the reference answer. It is concise, clear, and directly aligned with the provided reference."
+      }
+    },
+    {
+      "id": "cb1bcd7e-d454-44d8-8733-a83baf2fae2c",
+      "question": "Which class scans module directories for components and syncs manifest.py?",
+      "reference_answer": "AutoDiscoveryEngine",
+      "model_answer": "The **`AutoDiscoveryEngine`** class scans module directories for components and syncs the module’s **`manifest.py`** files.",
+      "difficulty": "easy",
+      "source_file": "docs/docs/modules/discovery/api-reference.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model answer correctly identifies `AutoDiscoveryEngine` as the class responsible for scanning module directories for components and syncing `manifest.py` files. It fully matches the reference answer and is clearly stated."
+      }
+    },
+    {
+      "id": "be3f4ffa-eb15-4fc1-b151-21d4aa9959de",
+      "question": "Is AquiliaServer.startup() idempotent?",
+      "reference_answer": "Yes, it is idempotent and guarded by an async lock.",
+      "model_answer": "Yes. **`AquiliaServer.startup()` is idempotent** and is **guarded by an async lock**, so repeated calls won’t re-run the full startup sequence concurrently.",
+      "difficulty": "easy",
+      "source_file": "docs/docs/runtime-lifecycle.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model answer matches the reference: it states that AquiliaServer.startup() is idempotent and that it is guarded by an async lock, and it is clear and well-formed."
+      }
+    },
+    {
+      "id": "38287e10-6b3d-4623-ad73-effeaf5f0142",
+      "question": "What is the default timeout value for `aq serve`?",
+      "reference_answer": "120",
+      "model_answer": "The default `timeout` value for `aq serve` is **120 seconds** (`--timeout`, default: `120`).",
+      "difficulty": "easy",
+      "source_file": "docs/docs/cli-reference.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model answer states the default timeout for `aq serve` is 120 seconds, matching the reference. It includes the important detail and clearly communicates it."
+      }
+    },
+    {
+      "id": "559afe1c-3b41-41ad-8449-ab85d35f42d5",
+      "question": "What is the default value of SecurityHeaders.referrer_policy?",
+      "reference_answer": "strict-origin-when-cross-origin",
+      "model_answer": "The default value of `SecurityHeaders.referrer_policy` is:\n\n**`'strict-origin-when-cross-origin'`**",
+      "difficulty": "easy",
+      "source_file": "docs/docs/modules/auth/api-reference.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model answer states the default value as 'strict-origin-when-cross-origin', matching the reference answer exactly. It fully and clearly provides the requested information without extraneous content."
+      }
+    },
+    {
+      "id": "a3d34a5e-0f0b-481b-853c-417359c2680b",
+      "question": "How does the ConfigLoader convert AQ_ environment variables with double underscores?",
+      "reference_answer": "Double underscores are converted to nested keys (e.g. AQ_AUTH__TOKENS__SECRET_KEY becomes auth.tokens.secret_key).",
+      "model_answer": "`ConfigLoader` treats `AQ_` environment variables as a config overlay, and it **converts double underscores (`__`) into nested/dotted keys**.\n\nSo an environment variable like:\n\n- `AQ_AUTH__TOKENS__SECRET_KEY=...`\n\nbecomes the config path:\n\n- `auth.tokens.secret_key`",
+      "difficulty": "medium",
+      "source_file": "docs/docs/configuration.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 4,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model answer correctly states that ConfigLoader converts double underscores to nested/dotted keys and gives the right example structure (AUTH__TOKENS__SECRET_KEY -> auth.tokens.secret_key). It is slightly less explicit than the reference about the exact transformation mechanism wording, but captures the essential behavior and example."
+      }
+    },
+    {
+      "id": "0a6039e4-7f1e-485f-8438-4d3c26442c6a",
+      "question": "List the five supported export formats in ExportFormat enum.",
+      "reference_answer": "CSV ('csv'), JSON ('json'), XLSX ('xlsx'), XML ('xml'), YAML ('yaml')",
+      "model_answer": "The five supported export formats in `ExportFormat` are:\n\n- `ExportFormat.CSV` → `'csv'`\n- `ExportFormat.JSON` → `'json'`\n- `ExportFormat.XLSX` → `'xlsx'`\n- `ExportFormat.XML` → `'xml'`\n- `ExportFormat.YAML` → `'yaml'`",
+      "difficulty": "easy",
+      "source_file": "docs/docs/modules/admin/api-reference.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model answer lists exactly the five supported export formats (CSV, JSON, XLSX, XML, YAML) with the correct corresponding enum string values, matching the reference. It is clearly formatted and easy to understand."
+      }
+    },
+    {
+      "id": "b460828e-67b2-4ced-a3db-0f0c3b0c117e",
+      "question": "What is the config precedence order used by ConfigLoader?",
+      "reference_answer": "CLI args > Environment variables > .env files > config files > defaults",
+      "model_answer": "`ConfigLoader.load()` merges configuration sources with the following precedence order (highest wins):\n\n1. **CLI args**\n2. **Environment variables**\n3. **`.env` files**\n4. **Config files**\n5. **Defaults**",
+      "difficulty": "medium",
+      "source_file": "docs/docs/modules/core/api-reference.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model answer matches the reference precedence order exactly: CLI args > Environment variables > .env files > config files > defaults. It clearly enumerates the sources with the correct highest-to-lowest precedence."
+      }
+    },
+    {
+      "id": "784a98a8-ff83-4c66-ac43-c7d0084c59ca",
+      "question": "Give the default value for sslmode in PostgresConfig.",
+      "reference_answer": "prefer",
+      "model_answer": "The default value for `sslmode` in `PostgresConfig` is **`'prefer'`**.",
+      "difficulty": "easy",
+      "source_file": "docs/docs/modules/db/api-reference.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model answer states the default value for `sslmode` in `PostgresConfig` as `'prefer'`, which matches the reference answer exactly. It is complete (no missing required detail), clearly phrased, and fully aligned with the reference."
+      }
+    },
+    {
+      "id": "884c55f6-24ae-4873-884b-97b0ab9a7d64",
+      "question": "What is the default threshold for `aq observe drift`?",
+      "reference_answer": "0.2",
+      "model_answer": "The default threshold for `aq observe drift` is **0.2** (set via `--threshold`, default value `0.2`).",
+      "difficulty": "easy",
+      "source_file": "docs/docs/cli-reference.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model answer states the default threshold for `aq observe drift` is 0.2 and correctly mentions it is set via `--threshold` with default value 0.2, matching the reference."
+      }
+    },
+    {
+      "id": "67d5ed6e-a6ee-4518-b23e-f30ec81a9612",
+      "question": "What is the value of CSRF FORM_FIELD constant in admin?",
+      "reference_answer": "_csrf_token",
+      "model_answer": "The admin CSRF protection uses:\n\n- `FORM_FIELD` = `'_csrf_token'`\n\n(from `AdminCSRFProtection.FORM_FIELD`, in `aquilia/admin/security.py`).",
+      "difficulty": "easy",
+      "source_file": "docs/docs/modules/admin/api-reference.md",
+      "scores": {
+        "correctness": 4,
+        "completeness": 4,
+        "faithfulness": 4,
+        "clarity": 5,
+        "explanation": "The model answer states `FORM_FIELD` is `'_csrf_token'`, but the reference value is `_csrf_token` (without quotes). This is effectively the same constant value, so factual correctness and faithfulness are high. It includes the relevant location and context and is clearly written."
+      }
+    },
+    {
+      "id": "35dfc2f3-38fe-41c6-9d18-367d4fd610e9",
+      "question": "Name the three bytecode cache implementations.",
+      "reference_answer": "InMemoryBytecodeCache, SurpBytecodeCache, RedisBytecodeCache",
+      "model_answer": "The three bytecode cache implementations are:\n\n- `InMemoryBytecodeCache`  \n- `SurpBytecodeCache`  \n- `RedisBytecodeCache`",
+      "difficulty": "medium",
+      "source_file": "docs/docs/modules/templates/api-reference.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model answer lists exactly the three cache implementations from the reference: InMemoryBytecodeCache, SurpBytecodeCache, and RedisBytecodeCache. It is clear, well-formed, and contains no extraneous or missing information."
+      }
+    },
+    {
+      "id": "4137e974-e46f-46c5-8a0e-4c4e6efe4226",
+      "question": "During HTTP request flow, how does ControllerRouter.match_sync() handle HEAD requests?",
+      "reference_answer": "HEAD can fall back to GET and strip the response body.",
+      "model_answer": "During the HTTP request flow, `ControllerRouter.match_sync()` handles `HEAD` requests by performing route matching for `HEAD`, and allowing a fallback behavior:\n\n- When matching, **`HEAD` can fall back to the corresponding `GET` route** if no `HEAD`-specific route is registered.\n- In that fallback case, the framework **strips the response body** (consistent with HTTP semantics for `HEAD`), while still using the matched route/controller logic.\n\nThis behavior is described in the HTTP flow step: “`ControllerRouter.match_sync()` selects a route; **HEAD can fall back to GET and strip the response body**.”",
+      "difficulty": "medium",
+      "source_file": "docs/docs/architecture.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model answer matches the reference: it states that HEAD falls back to the GET route when no HEAD-specific route exists and that the response body is stripped, aligning with the documented HTTP semantics. It is also clearly and understandably phrased and includes the key behavior."
+      }
+    },
+    {
+      "id": "0893dbc0-22c1-482f-b087-2124df8b7200",
+      "question": "In dev/test/local modes, what session cookie behavior is forced?",
+      "reference_answer": "Session cookies are forced to insecure mode so browser sessions work on plain HTTP.",
+      "model_answer": "In dev/test/local modes, Aquilia can **force session cookies to “insecure” mode (i.e., `cookie_secure = False`)** so browser sessions work over **plain HTTP** on `localhost`.",
+      "difficulty": "medium",
+      "source_file": "docs/docs/architecture.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model answer matches the reference: it states that in dev/test/local modes session cookies are forced to insecure mode so sessions work over plain HTTP (notably on localhost). It is accurate, includes the key point, stays aligned with the reference, and is clear."
+      }
+    },
+    {
+      "id": "dd1f2cd0-06d0-4e4c-9dd9-90f45f6816d8",
+      "question": "Which built-in Python type does DataObject subclass?",
+      "reference_answer": "dict",
+      "model_answer": "`DataObject` subclasses the built-in Python type `dict`.",
+      "difficulty": "easy",
+      "source_file": "docs/docs/modules/utils/api-reference.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model answer states that DataObject subclasses the built-in Python type dict, which matches the reference answer. It is complete, directly aligned, and clearly written."
+      }
+    },
+    {
+      "id": "12ed751d-d9a9-482b-b50b-d1494bfc89d8",
+      "question": "How many standard artifact kinds are defined in the ArtifactKind enum?",
+      "reference_answer": "12",
+      "model_answer": "The `ArtifactKind` enum defines **12** standard artifact kinds. They are:\n\n`config`, `code`, `model`, `template`, `migration`, `registry`, `route`, `di_graph`, `module`, `workspace`, `bundle`, `custom`.",
+      "difficulty": "easy",
+      "source_file": "docs/docs/modules/artifacts/api-reference.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model answer states there are 12 standard artifact kinds and lists 12 items (config, code, model, template, migration, registry, route, di_graph, module, workspace, bundle, custom). This matches the reference answer and is clearly presented."
+      }
+    },
+    {
+      "id": "79c40fe0-ba97-47d3-bec7-927a16f9c937",
+      "question": "Name the three mounted aq mail CLI commands.",
+      "reference_answer": "aq mail check, aq mail send-test, aq mail inspect",
+      "model_answer": "The three mounted `aq mail` CLI commands are:\n\n- `aq mail check`\n- `aq mail send-test TO [--subject VALUE] [--body VALUE]`\n- `aq mail inspect`",
+      "difficulty": "medium",
+      "source_file": "docs/docs/modules/mail/cli-reference.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model answer lists exactly the three commands from the reference: `aq mail check`, `aq mail send-test TO [--subject VALUE] [--body VALUE]`, and `aq mail inspect`. It is clear, well-formed, and fully aligned with the reference."
+      }
+    },
+    {
+      "id": "617b8f75-ed3f-4114-94d4-33a8582793f5",
+      "question": "List all five async lifecycle methods on EffectProvider.",
+      "reference_answer": "initialize, acquire, release, finalize, health_check",
+      "model_answer": "The five async lifecycle methods on `EffectProvider` are:\n\n- `async def initialize(self)` — initialize the provider (called once at startup)\n- `async def acquire(self, mode: str | None = None)` — acquire a resource for the effect (called per request)\n- `async def release(self, resource: Any, success: bool = True)` — release the resource (called at end of request)\n- `async def finalize(self)` — finalize the provider (called at shutdown)\n- `async def health_check(self)` — check provider health",
+      "difficulty": "medium",
+      "source_file": "docs/docs/modules/core/api-reference.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model answer lists exactly the five async lifecycle methods from the reference: initialize, acquire, release, finalize, and health_check. It remains aligned with the reference naming and count, and presents them clearly."
+      }
+    },
+    {
+      "id": "eb3aa974-2c79-4a7a-9fe0-176b48513537",
+      "question": "Which five secret-like marker strings cause MCP text redaction?",
+      "reference_answer": "password, secret, token, api_key, credential",
+      "model_answer": "MCP text redaction occurs for secret-like lines containing any of these marker strings:\n\n- `password`\n- `secret`\n- `token`\n- `api_key`\n- `credential`",
+      "difficulty": "hard",
+      "source_file": "docs/docs/mcp/security.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model answer lists exactly the five marker strings from the reference answer: password, secret, token, api_key, credential, and states that they trigger MCP text redaction. It is clear and well-formed."
+      }
+    },
+    {
+      "id": "7f432ba8-1c5a-4259-9424-f659e0887f2c",
+      "question": "Name the four values of the WidgetSize enum.",
+      "reference_answer": "SMALL ('sm'), MEDIUM ('md'), LARGE ('lg'), FULL ('full')",
+      "model_answer": "The four values of the `WidgetSize` enum are:\n\n- `SMALL` (`'sm'`)\n- `MEDIUM` (`'md'`)\n- `LARGE` (`'lg'`)\n- `FULL` (`'full'`)",
+      "difficulty": "easy",
+      "source_file": "docs/docs/modules/admin/api-reference.md",
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "explanation": "The model lists all four WidgetSize enum values (SMALL='sm', MEDIUM='md', LARGE='lg', FULL='full'), matching the reference. Formatting is clear and easy to read."
+      }
+    },
+    {
+      "id": "7fa0921b-8c63-4395-8e9f-18ffe8d213bb",
+      "question": "List all seven values of the ExportTarget enum.",
+      "reference_answer": "TFLITE, COREML, ONNX_QUANTIZED, TENSORRT, TVM, GGUF, CTRANSLATE2",
+      "model_answer": "I don't know.",
+      "difficulty": "easy",
+      "source_file": "docs/docs/modules/mlops/api-reference.md",
+      "scores": {
+        "correctness": 1,
+        "completeness": 1,
+        "faithfulness": 1,
+        "clarity": 4,
+        "explanation": "The model answer is \"I don't know.\", which does not provide the required seven enum values. It is not factually correct, is missing all important information, and does not align with the reference answer. However, it is clear and well-formed."
+      }
+    }
+  ]
+}
