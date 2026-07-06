@@ -1,0 +1,58 @@
+name: Test Aquilia Windows
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  windows:
+    runs-on: windows-latest
+
+    steps:
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Create virtual environment
+        shell: pwsh
+        run: |
+          python -m venv .venv
+          .\.venv\Scripts\Activate.ps1
+          python -m pip install --upgrade pip
+          pip install aquilia
+
+      - name: Initialize workspace
+        shell: pwsh
+        run: |
+          .\.venv\Scripts\Activate.ps1
+          aq init workspace my-workspace
+
+      - name: Add auth module
+        shell: pwsh
+        run: |
+          .\.venv\Scripts\Activate.ps1
+          cd my-workspace
+          aq add module auth
+
+      - name: Verify application starts
+        shell: pwsh
+        run: |
+          .\.venv\Scripts\Activate.ps1
+          cd my-workspace
+
+          $job = Start-Job -ScriptBlock {
+              Set-Location $using:PWD\my-workspace
+              . $using:PWD\.venv\Scripts\Activate.ps1
+              aq run
+          }
+
+          Start-Sleep -Seconds 15
+
+          if ($job.State -ne "Running") {
+              Receive-Job $job
+              throw "Aquilia failed to start"
+          }
+
+          Stop-Job $job
+          Remove-Job $job
